@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+		<body onload = "do_game()">
+		
+				<script>
+					var guesses = 0;
+					var finished = false;
+					var guess_input;
+					var target;
+					var colors = ["Blue", "Green", "Grey", "Maroon", "Orange","Pink","Purple","Red","Silver", "Yellow"]
+					
+				
+					function do_game() {
+						var random_number = Math.random()*10;
+						var random_number_int =Math.floor(random_number);
+						target = colors[random_number_int];
+						//alert("The Target color is " + target);
+					
+						while(!finished){
+									guess_input = prompt("I'm thinking of one of the following colors: Blue, Green, Grey, Maroon, Orange,Pink,Purple,Silver, Yellow. Can you guess the color? ");
+									guesses = guesses + 1;
+									finished = check_guess();
+								}
+						
+						}
+						
+					function check_guess(){
+						if (guess_input < target) {
+							alert("Sorry, Your guess is incorrect! \n\n" + "Please Try Again.\n\n" + "Hint: Your Color is Alphbetically lower than mine");
+							return false;
+							}	
+							
+						if (colors.indexOf(guess_input) == -1){
+							alert("Sorry, I dont recognize this color!\n\n " + "Please Try Again.");
+							return false;
+							}
+					
+						if (guess_input > target) {
+							alert("Sorry, Your guess is incorrect! \n\n" + "Please Try Again.\n\n" + "Hint: Your Color is Alphbetically Higher than mine");
+							return false;
+							}
+						if ( guess_input == target) {
+							myBody=document.getElementsByTagName("body")[0];
+							myBody.style.background = target;
+							alert("Congratulations! You have guessed the correct color.\n\n" + "It Took you " + guesses + " turn(s) to guess the correct answer!\n\n" + "Your color is shown in the background");
+							
+							return true;
+							}
+						
+				
+					
+						}	
+						
+					
+
+					
+				
+				</script>
+		</body>
+
+</html>

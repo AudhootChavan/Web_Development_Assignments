@@ -1,0 +1,115 @@
+<html>
+
+<head>
+	<style>
+	fieldset {background: Lightyellow; border: 10px Solid Yellow; margin-bottom:10px; width: 720px}
+	label {display:inline-block, right-align,top-align , width:auto, 180px }
+	.zap {background: red;color: white; display:inline-block;width: 100px;height: 50px;margin: 10px, text-align:center;border-style: hidden}
+	.zappy {background: purple;color: white; display:inline-block;width: 100px;height: 50px;margin: 10px, text-align:center;border-style: hidden}
+	.align {text-align: center}
+	.font {font-family:Georgia; font-size: 15px; font-weight: bold}
+	span:hover {font-size:20px}
+
+
+	</style>
+
+</head>
+
+<body class = "font">
+	<form method = "post" enctype = "multipart/type-form" action "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php ">
+	
+	<h1> Please Enter your details for our Dating Website! </h1>
+	
+		<fieldset>
+			<legend> Your Face </legend>
+			<div class = "align">
+			<span>
+			<label for = "Image"> Your Image: </label>
+			<input type = "file" name = "Image" required></span> <br>
+			<span><p> Image Preview:<img id = "preview" height = "150" width = "150"> </span></p>
+			
+			</div>
+		
+			
+			
+		</fieldset>
+		
+		<fieldset>
+			<legend> Your General Details </legend>
+			<div class = "align">
+			<span>
+			<label for = "name"> Name: </label>
+			<input type = "text" name = "name" placeholder = "Your Full Name" required> </span><br>
+			
+			<span><label for = "gender"> Gender: </label>
+			<input type = "radio" name = "gender" value = "male"required> Male
+			<input type = "radio" name = "gender" value = "female"required> Female</span><br>
+			
+			<span><label for = "age"> Age: </label>
+			<input type = "number"  min = "1" max = "100" step = "1" name = "age" required> </span><br>
+			
+			<span><label for = "birthday"> Date of Birth: </label>
+			<input type = "date" name = "birthday" required> </span><br>
+			
+			<span><label for = "color"> Favorite Color: </label>
+			<input type = "color" name = "color" required></span> <br>
+			
+			<span><label for = "country"> Which Country: </label>
+			<select name = "country">
+				<option value = "in" checked> India </option>
+				<option value = "hk"> HongKong </option>
+				<option value = "us"> United States </option>
+				<option value = "uk"> United Kingdom </option>
+				<option value = "ca"> Canada </option>
+				<option value = "ru"> Russia </option>
+			</select></span>
+			</div>
+			
+
+		</fieldset>
+		
+		<fieldset>
+				<legend> Your Indicators </legend>
+				<div class = "align">
+				<span><label for = "height">  Height: </label></span>
+				<span class= "zap"> Short </span> <input type = "range" min = "1"  max = "100" value = "50" step = "5" name = "height" required> <span class= "zappy"> Tall </span><br>
+				
+				
+				<span><label for = "salary"> Salary: </label></span>
+				<span class= "zap"> Poor </span><input type = "range" min = "1"  max = "100" value = "50" step = "5" name = "height" required> <span class= "zappy"> Rich </span><br>
+				</div>
+			
+			
+		</fieldset>
+		
+		<fieldset>
+			<legend> Your Contact Information </legend>
+			<div class = "align">
+			<span><label for = "email">  Email: </label>
+			<input type = "email"  name = "email" required></span><br>
+			
+			<span><label for = "number"> Mobile: </label>
+			<input type = "text" name = "number" required></span> <br>
+			
+			<span><label for = "address"> Address: </label>
+			<input type = "text" name = "adress" required></span> <br>
+			
+			<span><label for = "contact"> Method to contact you: </label>
+			<input type = "radio" name = "contact" value = "email"required> Email
+			<input type = "radio" name = "contact" value = "Whatsapp"required> Whatsapp
+			<input type = "radio" name = "contact" value = "Facebook"required> Facebook</span>
+			</div>
+		
+		
+			
+		</fieldset>
+		
+		
+		<input type = "submit" value = "Submit">
+	</form>
+	
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+
+
+</html>
